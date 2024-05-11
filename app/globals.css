@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --cream: #F6F5F2;  /* RGB(246, 245, 242) */
+  --beige: #F0EBE3;  /* RGB(240, 235, 227) */
+  --pink: #F3D0D7;   /* RGB(243, 208, 215) */
+  --offwhite: #FFEFEF; /* RGB(255, 239, 239) */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* Define dark mode colors if needed */
+    --cream: #333333;
+    --beige: #444444;
+    --pink: #555555;
+    --offwhite: #666666;
   }
 }
 
+
+
+
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--cream-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+          to bottom,
+          transparent,
+          rgb(var(--offwhite-rgb))
+  )
+  rgb(var(--beige-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.hero-container {
+  height: 200vh; /* Total height needed for scrolling effect */
+}
+
+.sticky-spline {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Full viewport height */
+  z-index: 0; /* Ensure it doesn't overlap subsequent content inappropriately */
 }
