@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: '#F6F5F2',
-        beige: '#F0EBE3',
-        pink: '#F3D0D7',
-        offwhite: '#FFEFEF'
+        'custom-pink-darkest': '#A87676',
+        'custom-pink-dark': '#CA8787',
+        'custom-pink-light': '#E1ACAC',
+        'custom-pink-lightest': '#FFD0D0',
       },
       keyframes: {
         float: {
